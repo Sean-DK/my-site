@@ -1,0 +1,136 @@
+html {
+    width: 100%;
+    height: 100%;
+    font-family: avenir-web, Avenir !important;
+}
+
+body {
+    background: url('images/background.png');
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #555 !important;
+}
+
+#content {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+}
+
+#column-left {
+    padding-top: 3em;
+    float: left;
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#column-center {
+    padding-top: 10em;
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#column-right {
+    padding-top: 3em;
+    float: right;
+    width: 33%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#column-center img {
+    height: 300px;
+    width: 300px;
+    border: #fff solid 4px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    box-shadow: #c0c0c0 0px 0px 4px;
+    margin: auto;
+}
+
+#links {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+#name {
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    padding-top: 0.5em;
+}
+
+#description {
+    padding-top: 0.5em;
+    font-size: 1.4em;
+    color: #ccc;
+}
+
+#description a {
+    color: #ccc;
+}
+
+#description a:hover {
+    text-decoration: none;
+}
+
+span {
+    position: relative;
+    left: 0 !important;
+}
+
+.btn {
+    color: #555;
+    font-size: 2em !important;
+}
+
+li a:hover {
+    color: #fff !important;
+    text-shadow: #c0c0c0 0px 0px 5px;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.mail:hover {
+    background-color: #ea4335 !important;
+}
+
+.github:hover {
+    background-color: #171515 !important;
+}
+
+.handshake:hover {
+    background-color: #fea700 !important;
+}
+
+.linkedin:hover {
+    background-color: #0077b5 !important;
+}
+
+.resume:hover {
+    background-color: #ff0000 !important;
+}
+
+.paypal:hover {
+    background-color: #003087 !important;
+}
+
+.phone:hover {
+    background-color: #00ff54 !important;
+}
+
+.lock:hover {
+    background-color: #ff7932 !important;
+}

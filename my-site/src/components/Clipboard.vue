@@ -1,14 +1,14 @@
 <template>
-    <div class='external-link' :style="cssProps">
-        <a target="_blank" :href=this.dest>
-            {{ text }}
+    <div class='clipboard' :style="cssProps">
+        <a target="_blank" v-on:click="doCopy">
+                {{ text }}
         </a>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ExternalLink',
+    name: 'Clipboard',
     props:
     {
         text: String,
@@ -26,18 +26,27 @@ export default {
                 '--font-size': this.fontSize
             }
         }
+    },
+    methods: {
+        doCopy: function () {
+            this.$copyText(this.$props.dest).then(function() {
+                alert('Copied') // TODO: make this more graceful
+            }, function () {
+                alert('Error copying')
+            })
+        }
     }
 }
 </script>
 
 <style scoped>
-.external-link
+.clipboard
 {
     width: 50%;
     margin: auto;
     text-align: left;
-    font-size: var(--font-size);
     color: #555;
+    font-size: var(--font-size);
     margin-bottom: 10px;
 }
 
@@ -56,6 +65,7 @@ a:hover
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
-    background-color: var(--hover-color)
+    background-color: var(--hover-color);
+    cursor: pointer;
 }
 </style>

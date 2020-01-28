@@ -50,7 +50,7 @@ export default {
                     id: 1,
                     text: 'Resume',
                     dest: '',
-                    color: '#ff0000',
+                    color: '#ff0000'
                 },
                 {
                     id: 2,
@@ -75,16 +75,19 @@ export default {
                     el: [
                         {
                             id: 1,
-                            type: 'ExternalLink',
+                            type: 'Clipboard',
                             text: 'Copy',
-                            color: '#ea4335'
+                            dest: 'seang@palittoconsulting.com',
+                            color: '#ea4335',
+                            fontSize: '32px'
                         },
                         {
                             id: 2,
                             type: 'ExternalLink',
                             text: 'Send',
                             dest: 'mailto:seang@palittoconsulting.com',
-                            color: '#ea4335'
+                            color: '#ea4335',
+                            fontSize: '32px'
                         }
                     ]
                 }

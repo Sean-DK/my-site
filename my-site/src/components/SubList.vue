@@ -11,6 +11,7 @@
                 v-bind:text='el.text'
                 v-bind:dest='el.dest'
                 v-bind:color='el.color'
+                v-bind:fontSize='el.fontSize'
             ></li>
         </ul>
     </div>
@@ -18,12 +19,14 @@
 
 <script>
 import ExternalLink from './ExternalLink.vue'
+import Clipboard from './Clipboard.vue'
 
 export default {
     name: 'SubList',
     components: 
     {
-        ExternalLink
+        ExternalLink,
+        Clipboard
     },
     props:
     {
@@ -52,8 +55,8 @@ export default {
     width: 50%;
     margin: auto;
     text-align: left;
-    font-size: 18px;
     color: #555;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -61,7 +64,6 @@ a
 {
     color: #555;
     text-decoration: none;
-    font-size: 2em;
     border-radius: 100px;
     padding-top: 5px;
     padding-bottom: 5px;

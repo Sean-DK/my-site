@@ -1,18 +1,40 @@
 <template>
     <div class='sub-list' :style="cssProps">
-        <a>
+        <a v-on:click='show = !show'>
             {{ text }}
         </a>
+        <ul v-if='show'>
+            <li
+                v-for='el in this.elements'
+                v-bind:is='el.type'
+                v-bind:key='el.id'
+                v-bind:text='el.text'
+                v-bind:dest='el.dest'
+                v-bind:color='el.color'
+            ></li>
+        </ul>
     </div>
 </template>
 
 <script>
+import ExternalLink from './ExternalLink.vue'
+
 export default {
     name: 'SubList',
+    components: 
+    {
+        ExternalLink
+    },
     props:
     {
         text: String,
-        color: String
+        color: String,
+        elements: Array
+    },
+    data: function () {
+        return {
+            show: false
+        }
     },
     computed: {
         cssProps() { 
@@ -53,5 +75,11 @@ a:hover
     text-shadow: #c0c0c0 0px 0px 5px;
     background-color: var(--hover-color);
     cursor: pointer;
+}
+
+ul
+{
+    margin-top: 10px;
+    margin-left: -90px;
 }
 </style>

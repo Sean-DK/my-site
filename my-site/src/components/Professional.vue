@@ -18,6 +18,7 @@
                 v-bind:key='sublist.id'
                 v-bind:text='sublist.text'
                 v-bind:color='sublist.color'
+                v-bind:elements='sublist.el'
             ></li>
             <li
                 is='ExternalLink'
@@ -60,7 +61,7 @@ export default {
             ],
             links2: [
                 {
-                    id: 1,
+                    id: 3,
                     text: 'PCS Bio',
                     dest: 'https://www.palittoconsulting.com/team_members/sean-gaffney/',
                     color: '#2384B7'
@@ -68,9 +69,24 @@ export default {
             ],
             sublists: [
                 {
-                    id: 1,
+                    id: 4,
                     text: 'Email',
-                    color: '#ea4335'
+                    color: '#ea4335',
+                    el: [
+                        {
+                            id: 1,
+                            type: 'ExternalLink',
+                            text: 'Copy',
+                            color: '#ea4335'
+                        },
+                        {
+                            id: 2,
+                            type: 'ExternalLink',
+                            text: 'Send',
+                            dest: 'mailto:seang@palittoconsulting.com',
+                            color: '#ea4335'
+                        }
+                    ]
                 }
             ]
         }

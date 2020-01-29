@@ -1,5 +1,5 @@
 <template>
-    <div class='professional'>
+    <div class='professional' onclick="">
         <h1>
             Professional
         </h1>
@@ -59,7 +59,7 @@ export default {
                 {
                     id: 2,
                     text: 'LinkedIn',
-                    dest: '',
+                    dest: 'https://www.linkedin.com/in/smgaffney1/',
                     color: '#0077b5',
                     icon: 'fab fa-linkedin'
                 }
@@ -87,7 +87,7 @@ export default {
                             dest: 'seang@palittoconsulting.com',
                             color: '#ea4335',
                             icon: 'far fa-copy',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         },
                         {
                             id: 2,
@@ -96,7 +96,7 @@ export default {
                             dest: 'mailto:seang@palittoconsulting.com',
                             color: '#ea4335',
                             icon: 'fas fa-share',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         }
                     ]
                 }
@@ -107,9 +107,68 @@ export default {
 </script>
 
 <style scoped>
+/* Mobile */
+@media only screen and (min-device-width : 300px) and (max-device-width : 599px) {
 .professional
 {
-    border: 1px solid blue;
+    overflow: hidden;
+    width: 100%;
+    height: 6vh;
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 0;
+    z-index: 2;
+    background: url('https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/background.png?alt=media&token=281c8caa-dff9-483c-a2a9-c3aab131fc47');
+    text-align: center;
+}
+
+h1
+{
+    font-size: 3vh;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.professional:hover
+{
+    height: 60vh;
+}
+}
+
+/* Tablet */
+@media only screen and (min-device-width : 600px) and (max-device-width : 999px) {
+.professional
+{
+    overflow: hidden;
+    width: 100%;
+    height: 6vh;
+    position: absolute;
+    margin: auto;
+    top: 33%;
+    left: 0;
+    z-index: 1;
+    background: url('https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/background.png?alt=media&token=281c8caa-dff9-483c-a2a9-c3aab131fc47');
+    text-align: center;
+}
+
+h1
+{
+    font-size: 3vh;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.professional:hover
+{
+    height: 60vh;
+}
+}
+
+/* Laptop */
+@media only screen and (min-device-width : 1000px) and (max-device-width : 1399px) {
+.professional
+{
     width: 33%;
     height: 75%;
     position: absolute;
@@ -121,8 +180,54 @@ export default {
 
 h1
 {
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: normal;
     color: #ccc;
 }
+}
+
+/* Small Desktop */
+@media only screen and (min-device-width : 1400px) and (max-device-width : 1599px) {
+.professional
+{
+    width: 33%;
+    height: 75%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1
+{
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ccc;
+}
+}
+
+/* Large Desktop */
+@media only screen and (min-device-width : 1600px) and (max-device-width : 10000px) {
+.professional
+{
+    width: 33%;
+    height: 75%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1
+{
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ccc;
+}
+}
+
+/* Special Cases */
+/* @media only screen and (min-device-width : ???) and (max-device-width : ???) {} */
 </style>

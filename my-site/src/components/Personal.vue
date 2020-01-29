@@ -1,5 +1,5 @@
 <template>
-    <div class='personal'>
+    <div class='personal' onclick="">
         <h1>
             Personal
         </h1>
@@ -69,7 +69,7 @@ export default {
                             dest: 'mail@sgaffney.me',
                             color: '#ea4335',
                             icon: 'far fa-copy',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         },
                         {
                             id: 2,
@@ -78,7 +78,7 @@ export default {
                             dest: 'mailto:mail@sgaffney.me',
                             color: '#ea4335',
                             icon: 'fas fa-share',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         }
                     ]
                 },
@@ -95,12 +95,29 @@ export default {
                             dest: '',
                             color: '',
                             icon: 'fas fa-tools',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         }
                     ]
                 },
                 {
                     id: 6,
+                    text: 'Stats',
+                    color: '#ed713a',
+                    icon: 'fas fa-trophy',
+                    el: [
+                        {
+                            id: 1,
+                            type: 'ExternalLink',
+                            text: 'Coming Soon!',
+                            dest: '',
+                            color: '',
+                            icon: 'fas fa-tools',
+                            fontSize: '1.7vw'
+                        }
+                    ]
+                },
+                {
+                    id: 7,
                     text: 'Gaming',
                     color: '#00ff54',
                     icon: 'fas fa-gamepad',
@@ -112,7 +129,7 @@ export default {
                             dest: 'Sean#6407',
                             color: '#738ADB',
                             icon: 'fab fa-discord',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         },
                         {
                             id: 2,
@@ -121,7 +138,7 @@ export default {
                             dest: 'https://steamcommunity.com/profiles/76561198058562688/',
                             color: '#377096',
                             icon: 'fab fa-steam',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         },
                         {
                             id: 3,
@@ -130,7 +147,7 @@ export default {
                             dest: 'Sean#14164',
                             color: '#0566b0 ',
                             icon: 'fab fa-battle-net',
-                            fontSize: '32px'
+                            fontSize: '1.7vw'
                         },
                         {
                             id: 4,
@@ -138,7 +155,7 @@ export default {
                             text: '',
                             dest: 'https://osu.ppy.sh/users/3706392',
                             color: '#ff66aa',
-                            fontSize: '100px'
+                            fontSize: '5vw'
                         }
                     ]
                 }
@@ -149,9 +166,66 @@ export default {
 </script>
 
 <style scoped>
+/* Mobile */
+@media only screen and (min-device-width : 300px) and (max-device-width : 599px) {
 .personal
 {
-    border: 1px solid green;
+    background: url('https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/background.png?alt=media&token=281c8caa-dff9-483c-a2a9-c3aab131fc47');
+    overflow: hidden;
+    width: 100%;
+    height: 6vh;
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 3vh;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.personal:hover
+{
+    height: 60vh;
+}
+}
+
+/* Tablet */
+@media only screen and (min-device-width : 600px) and (max-device-width : 999px) {
+.personal
+{
+    overflow: hidden;
+    width: 100%;
+    height: 6vh;
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 0;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 3vh;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.personal:hover
+{
+    height: 60vh;
+}
+}
+
+/* Laptop */
+@media only screen and (min-device-width : 1000px) and (max-device-width : 1399px) {
+.personal
+{
     width: 33%;
     height: 75%;
     position: absolute;
@@ -163,8 +237,54 @@ export default {
 
 h1
 {
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: normal;
     color: #ccc;
 }
+}
+
+/* Small Desktop */
+@media only screen and (min-device-width : 1400px) and (max-device-width : 1599px) {
+.personal
+{
+    width: 33%;
+    height: 75%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+h1
+{
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ccc;
+}
+}
+
+/* Large Desktop */
+@media only screen and (min-device-width : 1600px) and (max-device-width : 10000px) {
+.personal
+{
+    width: 33%;
+    height: 75%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+h1
+{
+    font-size: 3vw;
+    font-weight: normal;
+    color: #ccc;
+}
+}
+
+/* Special Cases */
+/* @media only screen and (min-device-width : ???) and (max-device-width : ???) {} */
 </style>

@@ -1,7 +1,8 @@
 <template>
     <div class='clipboard' :style="cssProps">
         <a target="_blank" v-on:click="doCopy">
-                {{ text }}
+            <i :class=this.icon></i>
+            {{ text }}
         </a>
     </div>
 </template>
@@ -14,6 +15,7 @@ export default {
         text: String,
         dest: String,
         color: String,
+        icon: String,
         fontSize: {
             type: String,
             default: '40px'
@@ -42,12 +44,11 @@ export default {
 <style scoped>
 .clipboard
 {
-    width: 50%;
     margin: auto;
     text-align: left;
     color: #555;
     font-size: var(--font-size);
-    margin-bottom: 10px;
+    margin-left: 70px;
 }
 
 a
@@ -59,6 +60,7 @@ a
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    display: inline-block;
 }
 
 a:hover

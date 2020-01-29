@@ -3,6 +3,7 @@
     <Professional/>
     <Portrait/>
     <Personal/>
+    <span id="copyright">Copyright © 2020 Sean Gaffney, All Rights Reserved</span>
   </div>
 </template>
 
@@ -55,5 +56,13 @@ body
   font-family: Cambria;
   height: 100%;
   text-align: center;
+}
+
+#copyright {
+  font-size: 12px;
+  color: #CCC;
+  bottom: 0;
+  left: 0;
+  position: absolute;
 }
 </style>

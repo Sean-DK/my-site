@@ -1,6 +1,7 @@
 <template>
     <div class='external-link' :style="cssProps">
         <a target="_blank" :href=this.dest>
+            <i :class=this.icon></i>
             {{ text }}
         </a>
     </div>
@@ -14,6 +15,7 @@ export default {
         text: String,
         dest: String,
         color: String,
+        icon: String,
         fontSize: {
             type: String,
             default: '40px'
@@ -33,12 +35,11 @@ export default {
 <style scoped>
 .external-link
 {
-    width: 50%;
     margin: auto;
     text-align: left;
-    font-size: var(--font-size);
     color: #555;
-    margin-bottom: 10px;
+    font-size: var(--font-size);
+    margin-left: 70px;
 }
 
 a
@@ -50,6 +51,7 @@ a
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    display: inline-block;
 }
 
 a:hover

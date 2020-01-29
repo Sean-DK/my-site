@@ -1,8 +1,10 @@
 <template>
     <div class='sub-list' :style="cssProps">
         <a v-on:click='show = !show'>
+            <i :class=this.icon></i>
             {{ text }}
         </a>
+        <transition name="fade">
         <ul v-if='show'>
             <li
                 v-for='el in this.elements'
@@ -11,9 +13,11 @@
                 v-bind:text='el.text'
                 v-bind:dest='el.dest'
                 v-bind:color='el.color'
+                v-bind:icon='el.icon'
                 v-bind:fontSize='el.fontSize'
             ></li>
         </ul>
+        </transition>
     </div>
 </template>
 
@@ -32,6 +36,11 @@ export default {
     {
         text: String,
         color: String,
+        icon: String,
+        fontSize: {
+            type: String,
+            default: '40px'
+        },
         elements: Array
     },
     data: function () {
@@ -42,7 +51,8 @@ export default {
     computed: {
         cssProps() { 
             return {
-                '--hover-color': this.color
+                '--hover-color': this.color,
+                '--font-size': this.fontSize
             }
         }
     }
@@ -52,12 +62,13 @@ export default {
 <style scoped>
 .sub-list
 {
-    width: 50%;
+    max-height: 1000px;
+    overflow: hidden;
     margin: auto;
     text-align: left;
     color: #555;
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: var(--font-size);
+    margin-left: 70px;
 }
 
 a
@@ -69,6 +80,7 @@ a
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    display: inline-block;
 }
 
 a:hover
@@ -83,5 +95,20 @@ ul
 {
     margin-top: 10px;
     margin-left: -90px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.3s;
+}
+
+.fade-enter, .fade-leave-to {
+    transform: translateX(-20px);
+    max-height: 0px;
+    opacity: 0;
+}
+
+.fade-enter-to, .fade-leave {
+    max-height: 1000px;
+    opacity: 1;
 }
 </style>

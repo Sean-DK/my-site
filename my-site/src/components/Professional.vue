@@ -11,6 +11,7 @@
                 v-bind:text='link.text'
                 v-bind:dest='link.dest'
                 v-bind:color='link.color'
+                v-bind:icon='link.icon'
             ></li>
             <li
                 is="SubList"
@@ -18,6 +19,7 @@
                 v-bind:key='sublist.id'
                 v-bind:text='sublist.text'
                 v-bind:color='sublist.color'
+                v-bind:icon='sublist.icon'
                 v-bind:elements='sublist.el'
             ></li>
             <li
@@ -27,6 +29,7 @@
                 v-bind:text='link.text'
                 v-bind:dest='link.dest'
                 v-bind:color='link.color'
+                v-bind:icon='link.icon'
             ></li>
         </ul>
     </div>
@@ -50,13 +53,15 @@ export default {
                     id: 1,
                     text: 'Resume',
                     dest: '',
-                    color: '#ff0000'
+                    color: '#ff0000',
+                    icon: 'fas fa-file-pdf'
                 },
                 {
                     id: 2,
                     text: 'LinkedIn',
-                    dest: 'mailto:seang@palittoconsulting.com',
-                    color: '#0077b5'
+                    dest: '',
+                    color: '#0077b5',
+                    icon: 'fab fa-linkedin'
                 }
             ],
             links2: [
@@ -64,7 +69,8 @@ export default {
                     id: 3,
                     text: 'PCS Bio',
                     dest: 'https://www.palittoconsulting.com/team_members/sean-gaffney/',
-                    color: '#2384B7'
+                    color: '#2384B7',
+                    icon: 'fas fa-user-tie'
                 }
             ],
             sublists: [
@@ -72,28 +78,31 @@ export default {
                     id: 4,
                     text: 'Email',
                     color: '#ea4335',
+                    icon: 'fas fa-envelope',
                     el: [
                         {
                             id: 1,
                             type: 'Clipboard',
-                            text: 'Copy',
+                            text: 'Copy to clipboard',
                             dest: 'seang@palittoconsulting.com',
                             color: '#ea4335',
+                            icon: 'far fa-copy',
                             fontSize: '32px'
                         },
                         {
                             id: 2,
                             type: 'ExternalLink',
-                            text: 'Send',
+                            text: 'Send email',
                             dest: 'mailto:seang@palittoconsulting.com',
                             color: '#ea4335',
+                            icon: 'fas fa-share',
                             fontSize: '32px'
                         }
                     ]
                 }
             ]
         }
-    },
+    }
 }
 </script>
 

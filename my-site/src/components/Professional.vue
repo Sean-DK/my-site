@@ -1,5 +1,5 @@
 <template>
-    <div class='professional' onclick="">
+    <div class='professional' role='professional_info' onclick="">
         <h1>
             Professional
         </h1>
@@ -8,6 +8,7 @@
                 is='ExternalLink'
                 v-for='link in this.links1'
                 v-bind:key='link.id'
+                v-bind:id='link.id'
                 v-bind:text='link.text'
                 v-bind:dest='link.dest'
                 v-bind:color='link.color'
@@ -17,6 +18,7 @@
                 is="SubList"
                 v-for='sublist in this.sublists'
                 v-bind:key='sublist.id'
+                v-bind:id='sublist.id'
                 v-bind:text='sublist.text'
                 v-bind:color='sublist.color'
                 v-bind:icon='sublist.icon'
@@ -26,6 +28,7 @@
                 is='ExternalLink'
                 v-for='link in this.links2'
                 v-bind:key='link.id'
+                v-bind:id='link.id'
                 v-bind:text='link.text'
                 v-bind:dest='link.dest'
                 v-bind:color='link.color'
@@ -66,7 +69,7 @@ export default {
             ],
             links2: [
                 {
-                    id: 3,
+                    id: 6,
                     text: 'PCS Bio',
                     dest: 'https://www.palittoconsulting.com/team_members/sean-gaffney/',
                     color: '#2384B7',
@@ -75,13 +78,13 @@ export default {
             ],
             sublists: [
                 {
-                    id: 4,
+                    id: 3,
                     text: 'Email',
                     color: '#ea4335',
                     icon: 'fas fa-envelope',
                     el: [
                         {
-                            id: 1,
+                            id: 4,
                             type: 'Clipboard',
                             text: 'Copy to clipboard',
                             dest: 'seang@palittoconsulting.com',
@@ -90,7 +93,7 @@ export default {
                             fontSize: '1.7vw'
                         },
                         {
-                            id: 2,
+                            id: 5,
                             type: 'ExternalLink',
                             text: 'Send email',
                             dest: 'mailto:seang@palittoconsulting.com',

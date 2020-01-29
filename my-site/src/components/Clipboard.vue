@@ -1,6 +1,6 @@
 <template>
     <div class='clipboard' :style="cssProps">
-        <a target="_blank" v-on:click="doCopy">
+        <a target="_blank" v-on:click="doCopy" v-on:keyup.enter="doCopy" :tabindex=this.id>
             <i :class=this.icon></i>
             {{ text }}
         </a>
@@ -12,6 +12,7 @@ export default {
     name: 'Clipboard',
     props:
     {
+        id: Number,
         text: String,
         dest: String,
         color: String,
@@ -31,11 +32,8 @@ export default {
     },
     methods: {
         doCopy: function () {
-            this.$copyText(this.$props.dest).then(function() {
-                alert('Copied') // TODO: make this more graceful
-            }, function () {
-                alert('Error copying')
-            })
+            this.$copyText(this.$props.dest)
+            this.$notify({type: 'success', text: 'Copied to clipboard'})
         }
     }
 }
@@ -65,7 +63,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -97,7 +95,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -129,7 +127,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -161,7 +159,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -193,7 +191,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;

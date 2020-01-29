@@ -1,6 +1,6 @@
 <template>
     <div class='sub-list' :style="cssProps">
-        <a v-on:click='show = !show'>
+        <a v-on:click='show = !show' v-on:keyup.enter='show = !show' :tabindex=this.id>
             <i :class=this.icon></i>
             {{ text }}
         </a>
@@ -10,6 +10,7 @@
                 v-for='el in this.elements'
                 v-bind:is='el.type'
                 v-bind:key='el.id'
+                v-bind:id='el.id'
                 v-bind:text='el.text'
                 v-bind:dest='el.dest'
                 v-bind:color='el.color'
@@ -34,6 +35,7 @@ export default {
     },
     props:
     {
+        id: Number,
         text: String,
         color: String,
         icon: String,
@@ -85,7 +87,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -140,7 +142,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -195,7 +197,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -250,7 +252,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -305,7 +307,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;

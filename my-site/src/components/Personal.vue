@@ -1,5 +1,5 @@
 <template>
-    <div class='personal' onclick="">
+    <div class='personal' role='personal_info' onclick="">
         <h1>
             Personal
         </h1>
@@ -8,6 +8,7 @@
                 is='ExternalLink'
                 v-for='link in this.links1'
                 v-bind:key='link.id'
+                v-bind:id='link.id'
                 v-bind:text='link.text'
                 v-bind:dest='link.dest'
                 v-bind:color='link.color'
@@ -17,6 +18,7 @@
                 is="SubList"
                 v-for='sublist in this.sublists'
                 v-bind:key='sublist.id'
+                v-bind:id='sublist.id'
                 v-bind:text='sublist.text'
                 v-bind:color='sublist.color'
                 v-bind:icon='sublist.icon'
@@ -41,14 +43,14 @@ export default {
         return {
             links1: [
                 {
-                    id: 1,
+                    id: 7,
                     text: 'GitHub',
                     dest: 'https://github.com/Sean-DK',
                     color: '#171515',
                     icon: 'fab fa-github'
                 },
                 {
-                    id: 2,
+                    id: 8,
                     text: 'PayPal',
                     dest: 'https://www.paypal.me/smgaffney',
                     color: '#003087',
@@ -57,13 +59,13 @@ export default {
             ],
             sublists: [
                 {
-                    id: 4,
+                    id: 9,
                     text: 'Email',
                     color: '#ea4335',
                     icon: 'fas fa-envelope',
                     el: [
                         {
-                            id: 1,
+                            id: 10,
                             type: 'Clipboard',
                             text: 'Copy to clipboard',
                             dest: 'mail@sgaffney.me',
@@ -72,7 +74,7 @@ export default {
                             fontSize: '1.7vw'
                         },
                         {
-                            id: 2,
+                            id: 11,
                             type: 'ExternalLink',
                             text: 'Send email',
                             dest: 'mailto:mail@sgaffney.me',
@@ -83,13 +85,13 @@ export default {
                     ]
                 },
                 {
-                    id: 5,
+                    id: 12,
                     text: 'Projects',
                     color: '#fea700',
                     icon: 'fas fa-tasks',
                     el: [
                         {
-                            id: 1,
+                            id: -1,
                             type: 'ExternalLink',
                             text: 'Coming Soon!',
                             dest: '',
@@ -100,13 +102,13 @@ export default {
                     ]
                 },
                 {
-                    id: 6,
+                    id: 13,
                     text: 'Stats',
                     color: '#ed713a',
                     icon: 'fas fa-trophy',
                     el: [
                         {
-                            id: 1,
+                            id: -1,
                             type: 'ExternalLink',
                             text: 'Coming Soon!',
                             dest: '',
@@ -117,13 +119,13 @@ export default {
                     ]
                 },
                 {
-                    id: 7,
+                    id: 14,
                     text: 'Gaming',
                     color: '#00ff54',
                     icon: 'fas fa-gamepad',
                     el: [
                         {
-                            id: 1,
+                            id: 15,
                             type: 'Clipboard',
                             text: 'Discord',
                             dest: 'Sean#6407',
@@ -132,7 +134,7 @@ export default {
                             fontSize: '1.7vw'
                         },
                         {
-                            id: 2,
+                            id: 16,
                             type: 'ExternalLink',
                             text: 'Steam',
                             dest: 'https://steamcommunity.com/profiles/76561198058562688/',
@@ -141,7 +143,7 @@ export default {
                             fontSize: '1.7vw'
                         },
                         {
-                            id: 3,
+                            id: 17,
                             type: 'Clipboard',
                             text: 'Blizzard',
                             dest: 'Sean#14164',
@@ -150,7 +152,7 @@ export default {
                             fontSize: '1.7vw'
                         },
                         {
-                            id: 4,
+                            id: -1,
                             type: 'ExternalLink',
                             text: '',
                             dest: 'https://osu.ppy.sh/users/3706392',

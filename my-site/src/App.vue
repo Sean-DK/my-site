@@ -3,6 +3,7 @@
     <Professional/>
     <Portrait/>
     <Personal/>
+    <notifications position="center"/>
     <span id="copyright">Copyright © 2020 Sean Gaffney, All Rights Reserved</span>
   </div>
 </template>
@@ -28,6 +29,7 @@ export default {
 html 
 {
   background: url('https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/background.png?alt=media&token=281c8caa-dff9-483c-a2a9-c3aab131fc47');
+  background-color: #252525;
   width: 300px;
   height: 533px;
   margin: auto;

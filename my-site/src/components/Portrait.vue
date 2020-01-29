@@ -1,6 +1,9 @@
 <template>
-    <div class='portrait'>
-        <img id='image' src='https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/portrait.png?alt=media&token=53952428-7178-4b92-8937-d3480ac82255'/>
+    <div class='portrait' role='portrait'>
+        <img id='image' 
+            alt='self portrait' 
+            src='https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/image0.jpg?alt=media&token=c25a05a9-4081-4158-b976-ecf85473fc43'
+        />
         <div id='name'>
             Sean Gaffney
         </div>
@@ -71,6 +74,13 @@ export default {
 {
     text-decoration: none;
 }
+
+#subtitle a:focus
+{
+    background: #ccc;
+    color: #313639;
+    box-shadow: #ccc 0px 0px 4px 2px;
+}
 }
 
 /* Tablet */
@@ -124,6 +134,13 @@ export default {
 {
     text-decoration: none;
 }
+
+#subtitle a:focus
+{
+    background: #ccc;
+    color: #313639;
+    box-shadow: #ccc 0px 0px 4px 2px;
+}
 }
 
 /* Laptop */
@@ -175,6 +192,13 @@ export default {
 #subtitle a:hover
 {
     text-decoration: none;
+}
+
+#subtitle a:focus
+{
+    background: #ccc;
+    color: #313639;
+    box-shadow: #ccc 0px 0px 4px 2px;
 }
 }
 
@@ -228,6 +252,13 @@ export default {
 {
     text-decoration: none;
 }
+
+#subtitle a:focus
+{
+    background: #ccc;
+    color: #313639;
+    box-shadow: #ccc 0px 0px 4px 2px;
+}
 }
 
 /* Large Desktop */
@@ -279,6 +310,13 @@ export default {
 #subtitle a:hover
 {
     text-decoration: none;
+}
+
+#subtitle a:focus
+{
+    background: #ccc;
+    color: #313639;
+    box-shadow: #ccc 0px 0px 4px 2px;
 }
 }
 

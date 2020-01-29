@@ -1,6 +1,6 @@
 <template>
     <div class='external-link' :style="cssProps">
-        <a target="_blank" :href=this.dest>
+        <a target="_blank" rel="noopener noreferrer" :href=this.dest :tabindex=this.id>
             <i :class=this.icon></i>
             {{ text }}
         </a>
@@ -12,6 +12,7 @@ export default {
     name: 'ExternalLink',
     props:
     {
+        id: Number,
         text: String,
         dest: String,
         color: String,
@@ -56,7 +57,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -87,7 +88,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -118,7 +119,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -149,7 +150,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;
@@ -180,7 +181,7 @@ a
     display: inline-block;
 }
 
-a:hover
+a:hover, a:focus
 {
     color: #fff !important;
     text-shadow: #c0c0c0 0px 0px 5px;

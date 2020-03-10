@@ -55,7 +55,7 @@ export default {
                 {
                     id: 1,
                     text: 'Resume',
-                    dest: '',
+                    dest: 'https://firebasestorage.googleapis.com/v0/b/my-site-e8840.appspot.com/o/Resume.pdf?alt=media&token=6f0d5a24-d844-4989-ac40-e1a5fe9e87e2',
                     color: '#ff0000',
                     icon: 'fas fa-file-pdf'
                 },
